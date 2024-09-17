@@ -1,6 +1,8 @@
 let response
 
 exports.lambdaHandler = async (event, context) => {
+  throw new Error("This will cause a deployment rollback")
+  /*
   try {
     response = {
       statusCode: 200,
@@ -14,4 +16,5 @@ exports.lambdaHandler = async (event, context) => {
   }
 
   return response
+  */
 }
